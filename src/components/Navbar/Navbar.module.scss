@@ -1,0 +1,124 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 96px;
+}
+
+.navbar__links{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar__links-logo {
+    margin-right: 2rem;
+}
+
+.navbar__links-logo img {
+    width: 62.56px;
+    height: 16.02px;
+}
+
+.navbar__links-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar__links-container p,
+.navbar__sign p,
+.navbar__menu-container p {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.navbar__sign button,
+.navbar__menu-container button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #FF4820;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar__menu {
+    display: none;
+
+    margin-left: 16px;
+    position: relative;
+
+    svg{
+        cursor: pointer;
+    }
+}
+
+.navbar__menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    background-color: var(--color-footer);
+    padding: 32px;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+}
+
+.navbar__menu-container_links {
+
+    p{
+        margin: 16px 0;
+    }
+}
+
+.navbar__menu-container_links-sign {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .navbar {
+        padding: 14px 35px;
+    }
+
+    .navbar__links-container {
+        display: none;
+    }
+
+    .navbar__menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .navbar {
+        padding: 5px 15px;
+    }
+    .navbar__sign {
+        display: none;
+    }
+}
